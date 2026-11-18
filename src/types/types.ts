@@ -4,6 +4,7 @@ export interface Product {
   id: number;
   name: string;
   price: number;
+  currency: 'USD';
   category: ProductCategory;
   src: string;
   inStock: boolean;
