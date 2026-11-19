@@ -29,7 +29,7 @@ export const products: Product[] = [
     price: 850,
     currency: 'USD',
     category: 'Mono Bouquets',
-    src: '../img/sunflowers.png',
+    src: './img/sunflowers.png',
     inStock: true,
     stock: 12,
     description: 'Bright and sunny bouquet of fresh golden sunflowers.',
