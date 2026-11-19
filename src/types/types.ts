@@ -3,13 +3,13 @@ export type ProductCategory = 'Mono Bouquets' | 'Floral Arrangements' | 'Indoor 
 export interface Product {
   id: number;
   name: string;
-  price: number;
+  price: number; // в копейках
   currency: 'USD';
   category: ProductCategory;
   src: string;
   inStock: boolean;
   stock: number;
-  description?: string;
+  description: string;
 }
 export interface CartItem {
   product: Product;
