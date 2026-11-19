@@ -11,3 +11,9 @@ export interface Product {
   stock: number;
   description?: string;
 }
+export interface CartItem {
+  product: Product;
+  quantity: number;
+}
+
+export type Cart = CartItem[];
