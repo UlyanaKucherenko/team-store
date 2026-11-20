@@ -11,5 +11,4 @@ renderCartPage(cartContainer);
 
 const catalog = createElement('section', 'catalog');
 document.body.append(catalog);
-
 renderCatalog(catalog, products);

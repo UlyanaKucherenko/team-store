@@ -11,6 +11,13 @@ export interface Product {
   stock: number;
   description: string;
 }
+
+export interface FilterOptions {
+  query: string;
+  category: string;
+  minPrice: number | null;
+  maxPrice: number | null;
+}
 export interface CartItem {
   product: Product;
   quantity: number;
