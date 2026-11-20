@@ -5,7 +5,7 @@ export interface Product {
   name: string;
   price: number; // в копейках
   currency: 'USD';
-  category: ProductCategory;
+  category: ProductCategory | 'all';
   src: string;
   inStock: boolean;
   stock: number;
@@ -24,3 +24,5 @@ export interface CartItem {
 }
 
 export type Cart = CartItem[];
+
+export type SortMode = 'default' | 'asc' | 'desc';
