@@ -5,5 +5,4 @@ import { createElement } from './ui/createElement.js';
 
 const catalog = createElement('section', 'catalog');
 document.body.append(catalog);
-
 renderCatalog(catalog, products);
