@@ -18,3 +18,9 @@ export interface FilterOptions {
   minPrice: number | null;
   maxPrice: number | null;
 }
+export interface CartItem {
+  product: Product;
+  quantity: number;
+}
+
+export type Cart = CartItem[];
