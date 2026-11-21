@@ -1,12 +1,9 @@
 import { createElement } from '../ui/createElement.js';
 import { formatPrice } from '../ui/formatPrice.js';
 import { createCartList } from '../ui/cart/cartList.js';
-import { getCartTotal, incQuantity, decQuantity, removeFromCart } from '../core/cart/index.js';
-import { products } from '../data/products.js';
-import type { Cart } from '../types/types.js';
+import { getCartTotal } from '../core/cart/index.js';
+import { cart, incCartProduct, decCartProduct, removeCartProduct } from '../state/cartState.js';
 import type { CartItemActions } from '../ui/cart/cartItem.js';
-
-let cart: Cart = [{ product: products[0], quantity: 1 }];
 
 export function renderCartPage(container: HTMLElement): void {
   function update(): void {
@@ -27,15 +24,15 @@ export function renderCartPage(container: HTMLElement): void {
 
     const actions: CartItemActions = {
       onIncrement: (id) => {
-        cart = incQuantity(cart, id);
+        incCartProduct(id);
         update();
       },
       onDecrement: (id) => {
-        cart = decQuantity(cart, id);
+        decCartProduct(id);
         update();
       },
       onRemove: (id) => {
-        cart = removeFromCart(cart, id);
+        removeCartProduct(id);
         update();
       },
     };
