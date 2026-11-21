@@ -3,7 +3,7 @@ import { products } from './data/products.js';
 import { renderCatalog } from './ui/renderCatalog.js';
 import { createElement } from './ui/createElement.js';
 import { renderCartPage } from './pages/cartPage.js';
-import { renderSortButtons } from './ui/renderSortFilterButtons.js';
+import { renderSortButtons } from './ui/renderSortButtons.js';
 import type { SortMode } from './types/types.js';
 import { sortProducts } from './core/sortProducts.js';
 
