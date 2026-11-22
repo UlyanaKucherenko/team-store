@@ -1,6 +1,7 @@
 import type { Product } from '../types/types';
 import { createElement } from './createElement.js';
 import { formatPrice } from './formatPrice.js';
+import { addProductToCart } from '../state/cartState.js';
 
 export function createProductCard(product: Product): HTMLElement {
   const card = createElement('article', 'card');
@@ -20,6 +21,10 @@ export function createProductCard(product: Product): HTMLElement {
   const addBtn = createElement('button', 'addBtn', 'Add');
   addBtn.type = 'button';
   addBtn.disabled = !product.inStock;
+
+  addBtn.addEventListener('click', () => {
+    addProductToCart(product);
+  });
 
   card.append(image, title, price, description, inStock, addBtn);
   return card;
