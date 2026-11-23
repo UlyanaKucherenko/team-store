@@ -26,3 +26,23 @@ export interface CartItem {
 export type Cart = CartItem[];
 
 export type SortMode = 'default' | 'asc' | 'desc';
+
+export type FilterPanelState = FilterOptions & { sort: SortMode };
+
+export interface AboutSection {
+  title: string;
+  paragraphs: string[];
+}
+
+export interface TeamMember {
+  name: string;
+  role: string;
+  tasks: string[];
+}
+
+export interface TeamSection {
+  title: string;
+  intro: string;
+  members: TeamMember[];
+  outro: string;
+}

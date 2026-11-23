@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { filterProducts } from '../src/core/filterProducts.js';
+import { filterProducts } from '../src/core/catalogProducts/filterProducts.js';
 import type { FilterOptions, Product } from '../src/types/types.js';
 
 const products: Product[] = [

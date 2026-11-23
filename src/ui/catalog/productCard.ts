@@ -1,7 +1,7 @@
-import type { Product } from '../types/types';
-import { createElement } from './createElement.js';
-import { formatPrice } from './formatPrice.js';
-import { addProductToCart } from '../state/cartState.js';
+import type { Product } from '../../types/types.js';
+import { createElement } from '../createElement.js';
+import { formatPrice } from '../../utils/formatPrice.js';
+import { addProductToCart } from '../../state/cartState.js';
 
 export function createProductCard(product: Product): HTMLElement {
   const card = createElement('article', 'card');

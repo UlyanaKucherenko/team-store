@@ -1,5 +1,5 @@
 import { createElement } from '../createElement.js';
-import { formatPrice } from '../formatPrice.js';
+import { formatPrice } from '../../utils/formatPrice.js';
 import { calculateDiscount, calculateFinalTotal } from '../../core/cart/index.js';
 
 export function createCartSummary(total: number, discountPercent: number): HTMLElement {
