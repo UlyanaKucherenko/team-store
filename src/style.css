@@ -216,3 +216,12 @@ body {
   font-size: 1.25rem;
   font-weight: bold;
 }
+
+/* Filter Panel*/
+
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}

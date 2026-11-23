@@ -26,3 +26,5 @@ export interface CartItem {
 export type Cart = CartItem[];
 
 export type SortMode = 'default' | 'asc' | 'desc';
+
+export type FilterPanelState = FilterOptions & { sort: SortMode };
