@@ -11,8 +11,9 @@ function parsePrice(value: string): number | null {
 export function createFilterPanel(
   categories: ProductCategory[],
   onChange: (state: FilterPanelState) => void,
+  startState: FilterPanelState = initialFilterState,
 ): HTMLElement {
-  let state: FilterPanelState = { ...initialFilterState };
+  let state: FilterPanelState = { ...startState };
 
   const panel = createElement('form', 'filter-panel');
   panel.addEventListener('submit', (event) => event.preventDefault());
@@ -47,7 +48,7 @@ export function createFilterPanel(
     new Option('Price: high to low', 'desc'),
   );
 
-  const resetButton = createElement('button', 'filter-panel__reset', 'Reset');
+  const resetButton = createElement('button', 'filter-panel_reset', 'Reset');
   resetButton.setAttribute('type', 'button');
 
   const update = (patch: Partial<FilterPanelState>): void => {
@@ -70,6 +71,12 @@ export function createFilterPanel(
     state = { ...initialFilterState };
     onChange(state);
   });
+
+  searchInput.value = state.query;
+  categorySelect.value = state.category;
+  minInput.value = state.minPrice === null ? '' : String(state.minPrice / 100);
+  maxInput.value = state.maxPrice === null ? '' : String(state.maxPrice / 100);
+  sortSelect.value = state.sort;
 
   panel.append(searchInput, categorySelect, minInput, maxInput, sortSelect, resetButton);
 
