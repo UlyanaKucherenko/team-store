@@ -1,5 +1,5 @@
 import { createElement } from '../createElement.js';
-import { formatPrice } from '../formatPrice.js';
+import { formatPrice } from '../../utils/formatPrice.js';
 import { getCartItemTotal } from '../../core/cart/index.js';
 import type { CartItem } from '../../types/types';
 

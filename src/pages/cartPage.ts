@@ -1,5 +1,5 @@
 import { createElement } from '../ui/createElement.js';
-import { formatPrice } from '../ui/formatPrice.js';
+import { formatPrice } from '../utils/formatPrice.js';
 import { createCartList } from '../ui/cart/cartList.js';
 import { getCartTotal } from '../core/cart/index.js';
 import { cart, incCartProduct, decCartProduct, removeCartProduct } from '../state/cartState.js';
