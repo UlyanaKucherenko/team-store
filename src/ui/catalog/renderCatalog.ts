@@ -1,6 +1,6 @@
-import { createProductCard } from './productCard.js';
-import type { Product } from '../types/types.js';
-import { createElement } from './createElement.js';
+import { createProductCard } from '../catalog/productCard.js';
+import type { Product } from '../../types/types.js';
+import { createElement } from '../createElement.js';
 
 export function renderCatalog(container: HTMLElement, products: Product[]): void {
   if (products.length === 0) {

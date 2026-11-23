@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { sortProducts } from '../src/core/sortProducts.js';
+import { sortProducts } from '../src/core/catalogProducts/sortProducts.js';
 import type { Product } from '../src/types/types.js';
 
 const createProduct = (overrides: Partial<Product> = {}): Product => ({

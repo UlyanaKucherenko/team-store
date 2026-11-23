@@ -1,4 +1,4 @@
-import type { FilterOptions, Product } from '../types/types.js';
+import type { FilterOptions, Product } from '../../types/types.js';
 
 export function filterProducts(products: Product[], options: FilterOptions): Product[] {
   return products.filter((product) => {
