@@ -40,3 +40,13 @@ export const getCartItemTotal = (item: CartItem): number => {
 export const getCartTotal = (cart: Cart): number => {
   return cart.reduce((total, item) => total + getCartItemTotal(item), 0);
 };
+
+export const calculateDiscount = (total: number, discountPercent: number): number => {
+  if (total <= 0 || discountPercent <= 0) return 0;
+  return Math.round((total * discountPercent) / 100);
+};
+
+export const calculateFinalTotal = (total: number, discountPercent: number): number => {
+  if (total <= 0) return 0;
+  return total - calculateDiscount(total, discountPercent);
+};
