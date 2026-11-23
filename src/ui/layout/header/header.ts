@@ -4,7 +4,7 @@ import { NAV_ITEMS } from './consts.js';
 export function createHeader(): HTMLElement {
   const header = createElement('header', 'header container');
 
-  const logo = createElement('a', 'header__logo', '🌿 Flowers Store');
+  const logo = createElement('a', 'header__logo', 'MAROON');
   logo.href = '#/about';
 
   const nav = createElement('nav', 'nav');

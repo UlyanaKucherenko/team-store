@@ -1,16 +1,12 @@
-import { createElement } from '../ui/createElement.js';
 import { renderCartPage } from '../pages/cartPage.js';
 import { updateActiveNavLink } from '../ui/layout/header/updateActiveNavLink.js';
 import { renderCatalogPage } from '../pages/catalogPage.js';
+import { renderAboutPage } from '../pages/aboutPage.js';
 
 type PageRenderer = (container: HTMLElement) => void;
 
 const ROUTES: Record<string, PageRenderer> = {
-  '#/about': (container) => {
-    const about = createElement('section', 'about');
-    about.append(createElement('h1', 'about__title', 'About Us'));
-    container.append(about);
-  },
+  '#/about': (container) => renderAboutPage(container),
   '#/catalog': (container) => renderCatalogPage(container),
   '#/cart': (container) => renderCartPage(container),
 };
