@@ -105,7 +105,7 @@ body::after {
 
 .nav__link {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   padding: 8px 12px;
   text-decoration: none;
   color: var(--taupe);
@@ -142,6 +142,25 @@ body::after {
 .nav__link--active::after {
   transform: scaleX(1);
   opacity: 1;
+}
+
+.nav__cart-badge {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  margin-left: 6px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ivory);
+  background-color: var(--maroon);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(84, 43, 53, 0.25);
+  transition: transform 0.2s ease;
 }
 
 .about_section {
