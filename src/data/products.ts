@@ -161,4 +161,16 @@ export const products: Product[] = [
     stock: 5,
     description: 'Statement Ficus Lyrata tree in a modern matte planter.',
   },
+  {
+    id: 15,
+    name: 'White Tulip Bouquet',
+    price: 850,
+    currency: 'USD',
+    category: 'Mono Bouquets',
+    src: './img/tulips.png',
+    inStock: true,
+    stock: 8,
+    description:
+      'Elegant bouquet of fresh white tulips, perfect for expressing love, appreciation and elegance.',
+  },
 ];
