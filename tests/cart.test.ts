@@ -6,6 +6,7 @@ import {
   getCartTotal,
   incQuantity,
   removeFromCart,
+  getCartCount,
 } from '../src/core/cart';
 import type { Cart, CartItem, Product } from '../src/types/types';
 
@@ -88,6 +89,19 @@ describe('Cart logic', () => {
       ];
 
       expect(getCartTotal(cart)).toBe(3288);
+    });
+  });
+
+  describe('getCartCount', () => {
+    it('should return total count of all items in cart', () => {
+      expect(getCartCount([])).toBe(0);
+
+      const cart: Cart = [
+        { product: mockProduct1, quantity: 2 },
+        { product: mockProduct2, quantity: 1 },
+      ];
+
+      expect(getCartCount(cart)).toBe(3);
     });
   });
 });

@@ -15,6 +15,13 @@ export function createHeader(): HTMLElement {
     const a = createElement('a', 'nav__link', item.label);
     a.href = item.href;
     a.dataset.route = item.href;
+
+    if (item.href === '#/cart') {
+      const badge = createElement('span', 'nav__cart-badge');
+      badge.style.display = 'none';
+      a.append(badge);
+    }
+
     li.append(a);
     return li;
   });
