@@ -27,6 +27,8 @@ export function createCartItem(item: CartItem, actions: CartItemActions): HTMLEl
   const quantity = createElement('span', 'cart-item__quantity', String(item.quantity));
   const incBtn = createElement('button', 'cart-item__btn cart-item__btn--inc', '+');
   incBtn.type = 'button';
+  incBtn.disabled = item.quantity >= item.product.stock;
+  if (incBtn.disabled) incBtn.title = 'Maximum stock reached';
   incBtn.addEventListener('click', () => actions.onIncrement(item.product.id));
 
   const quantityControl = createElement(
