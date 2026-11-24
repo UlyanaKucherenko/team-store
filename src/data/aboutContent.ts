@@ -16,7 +16,7 @@ export const ourTeam: TeamSection = {
     'Behind MAROON is a small, dedicated team working together to create a seamless, inspiring, and enjoyable online shopping experience.',
   members: [
     {
-      name: 'Ksenia',
+      name: 'Kseniya',
       role: 'Frontend Developer',
       tasks: [
         'Developed the product filtering system.',
@@ -24,10 +24,12 @@ export const ourTeam: TeamSection = {
         'Worked on the product catalog and product cards.',
         'Prepared product data.',
         'Implemented filter state persistence.',
+        'Created the styling and responsive layout.',
+        'Implemented stock control for product availability.',
       ],
     },
     {
-      name: 'Ulyana',
+      name: 'Uliana',
       role: 'Frontend Developer',
       tasks: [
         'Set up the project structure and repository.',
@@ -36,6 +38,8 @@ export const ourTeam: TeamSection = {
         'Connected the product catalog with the cart.',
         'Worked on the shopping cart page.',
         'Implemented promotional code functionality.',
+        'Implemented shopping cart persistence.',
+        'Displayed the current number of items in the cart next to the cart link in the site header.',
       ],
     },
   ],
