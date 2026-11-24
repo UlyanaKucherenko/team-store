@@ -50,3 +50,7 @@ export const calculateFinalTotal = (total: number, discountPercent: number): num
   if (total <= 0) return 0;
   return total - calculateDiscount(total, discountPercent);
 };
+
+export const getCartCount = (cart: Cart): number => {
+  return cart.reduce((total, item) => total + item.quantity, 0);
+};
