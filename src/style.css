@@ -438,6 +438,37 @@ h1.about_title {
   cursor: not-allowed;
 }
 
+.catalog__load-more {
+  display: none;
+  margin: 32px auto;
+  padding: 14px 40px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  background-color: var(--maroon);
+  border: 1px solid var(--maroon);
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(84, 43, 53, 0.2);
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.catalog__load-more:hover {
+  background-color: var(--maroon-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(84, 43, 53, 0.3);
+}
+
+.catalog__load-more:active {
+  transform: translateY(0);
+}
+
 /* Cart */
 
 .cart {
