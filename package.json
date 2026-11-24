@@ -1,7 +1,7 @@
 {
   "name": "team-store",
   "private": true,
-  "homepage": "https://github.com/UlyanaKucherenko/team-store/",
+  "homepage": "https://ulyanakucherenko.github.io/team-store/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
